@@ -9,11 +9,9 @@
 
 <script>
 import Card from '../components/Card.vue'
-// import api from '../services/api'
 import client from '../services/pexels'
 
 export default {
-    // api.get('/curated?page=3&per_page=40') 
     name:'#Main',
     components: {
         Card
@@ -24,10 +22,8 @@ export default {
         }
     },
      async beforeCreate() {
-
         await client.photos.curated({page: 3, per_page: 12,  locale:'pt-BR', size:'large'}).then(photos => {
             this.cardsList = photos.photos
-            console.log(this.cardsList)
         })
     }
 } 

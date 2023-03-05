@@ -2,13 +2,15 @@
   <div>
       <Header></Header>
 
-      <Main></Main>
+      <router-view></router-view>
+
+      <!-- <Main></Main> -->
   </div>
 </template>
 
 <script>
 import Header from './Header/Header.vue'
-import Main from './Main/Main.vue'
+// import Main from './Main/Main.vue'
 
 export default {
   name: 'App',
@@ -19,7 +21,7 @@ export default {
   },
   components: {
       Header,
-      Main
+     //  Main
       
   }
 }
