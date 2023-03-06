@@ -7,6 +7,11 @@ const routes = [
         path:'/',
         name: 'main',
         component: Main
+    },
+    {
+        path:'/pagination/:id',
+        name: 'pagination',
+        component: Main
     }
 ]
 
