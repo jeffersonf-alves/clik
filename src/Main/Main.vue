@@ -6,7 +6,7 @@
         </div>
     </div>
     <div id="Main" class="container d-flex flex-wrap mt-5">
-        <Card v-for="photo in cardsList" :key="photo.src.original" 
+        <Card v-for="photo in cardsList" :key="photo.src.small" 
             :urlImage="photo.src.original"
             :autor="photo.photographer"
         ></Card>
@@ -31,7 +31,7 @@ export default {
         }
     },
      async beforeCreate() {
-        await client.photos.curated({page: 1, per_page: 12,  locale:'pt-BR', size:'large'}).then(photos => {
+        await client.photos.curated({page: 1, per_page: 8,  locale:'pt-BR', size:'small'}).then(photos => {
             this.cardsList = photos.photos
             this.isLoading = false
 
@@ -40,7 +40,7 @@ export default {
     watch: {
         $route(to) {
             this.id = to.params.id
-            client.photos.curated({page: this.id, per_page: 12,  locale:'pt-BR', size:'large'}).then(photos => {
+            client.photos.curated({page: this.id, per_page: 8,  locale:'pt-BR', size:'small'}).then(photos => {
                 this.cardsList = photos.photos
                 this.isLoading = false
                 window.scrollTo(0, 0);

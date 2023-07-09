@@ -27,10 +27,12 @@
         </div>
 
 
-        <!--SECTION TITLES HEADER-->
-        <!-- <div class="h-100 d-inline-block d-flex justify-content-center align-items-center">
-            <h1>Encontre sua Inspiração</h1>
-        </div> -->
+         <div class="h-100 d-inline-block d-flex justify-content-center align-items-center">
+            <div class="btn-group" role="group" aria-label="Basic example">
+                <button type="button" class="btn btn-outline-secondary">Imagens</button>
+                <button type="button" class="btn btn-outline-secondary">Videos</button>
+            </div>
+        </div> 
     </header>
 </template>
 
