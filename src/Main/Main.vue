@@ -1,11 +1,11 @@
 <template>
     <div>
-        <div v-if="isLoading" class="d-flex justify-content-center mt-5">
+        <div v-if="isLoading" class="d-flex justify-content-center mt-3">
             <div class="spinner-border spinner-border-lg" role="status">
             <span class="visually-hidden">Loading...</span>
         </div>
     </div>
-    <div id="Main" class="container d-flex flex-wrap mt-5">
+    <div id="Main" class="container d-flex flex-wrap mt-3">
         <Card v-for="photo in cardsList" :key="photo.src.small" 
             :urlImage="photo.src.original"
             :autor="photo.photographer"
@@ -30,7 +30,7 @@ export default {
             isLoading: true
         }
     },
-     async beforeCreate() {
+     async created() {
         await client.photos.curated({page: 1, per_page: 8,  locale:'pt-BR', size:'small'}).then(photos => {
             this.cardsList = photos.photos
             this.isLoading = false

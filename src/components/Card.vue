@@ -1,7 +1,7 @@
 <template>
     <div id="Card" >
         <div class="card m-2" style="width: 18rem;">
-        <img v-bind:src="urlImage" class="card-img-top" alt="...">
+        <img v-lazy="urlImage" class="card-img-top" alt="...">
         <div class="card-body">
             <p class="card-text">{{autor}}</p>
         </div>

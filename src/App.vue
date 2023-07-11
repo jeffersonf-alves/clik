@@ -1,6 +1,13 @@
 <template>
   <div>
       <Header></Header>
+      
+         <div class="mt-3 d-inline-block d-flex justify-content-center align-items-center">
+            <div class="btn-group" role="group" aria-label="Basic example">
+                <router-link to="/" type="button" class="btn btn-outline-secondary" router-link-active="active">Imagens</router-link>
+                <router-link to="/videos" type="button" class="btn btn-outline-secondary">Videos</router-link>
+            </div>
+        </div> 
 
       <router-view></router-view>
 
@@ -33,5 +40,7 @@ export default {
   padding: 0;
 }
 
-
+.active {
+  background-color: black !important;
+}
 </style>
