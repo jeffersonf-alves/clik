@@ -4,8 +4,8 @@
       
          <div class="mt-3 d-inline-block d-flex justify-content-center align-items-center">
             <div class="btn-group" role="group" aria-label="Basic example">
-                <router-link to="/"  class="btn" router-link-active="active" exact>Imagens</router-link>
-                <router-link to="/videos" type="button" router-link-active="active" class="btn btn-outline-secondary">Videos</router-link>
+                <router-link to="/"  class="btn btn-outline-secondary" active-class="active">Imagens</router-link>
+                <router-link to="/videos" class="btn btn-outline-secondary" type="button" active-class="active">Videos</router-link>
             </div>
         </div> 
 
@@ -43,4 +43,10 @@ export default {
 .active {
   background-color: black !important;
 }
+.btn2 {
+  margin: 4px;
+  padding: 1px;
+  border: 2px solid black;
+}
+
 </style>

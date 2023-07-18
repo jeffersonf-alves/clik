@@ -1,8 +1,8 @@
 <template>
     <div id="ButtonsMain" class="btn-toolbar mt-5 mb-3 d-flex justify-content-center" role="toolbar" aria-label="Toolbar with button groups">
     <div class="btn-group me-2" role="group" aria-label="First group">
-        <router-link type="button" to="/" active-class="bg-dark text-white" class="btn btn-outline-secondary" exact>1</router-link>
-        <router-link v-for="pagina in listaPagination" :key="pagina.pag" @click="altPagination(pagina.pag)" type="button" :to="pagina.destino" active-class="bg-dark text-white" class="btn btn-outline-secondary">{{pagina.pag}}</router-link >
+        <router-link type="button" to="/pagination/1" active-class="bg-dark text-white" class="btn btn-outline-secondary" exact>1</router-link>
+        <router-link v-for="pagina in listaPagination" :key="pagina.pag" @click="altPagination(pagina.pag)" type="button" :to="pagina.destino" active-class="bg-dark text-white" class="btn btn-outline-secondary" exact>{{pagina.pag}}</router-link >
     </div>
     </div>
 </template>
